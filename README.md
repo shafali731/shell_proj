@@ -1,5 +1,5 @@
 # Shell[ing] out commands
-Shafali Gupta
+##Shafali Gupta
 
 ##Features:
   - Forks and executes commands
@@ -19,27 +19,31 @@ Shafali Gupta
 commands.c
   Handles parsing through lines and executing them.
 
-  /*======== int size_arr() ==========
+```c
+  int size_arr()
   Inputs:  char ** arr
   Returns: int of the size of the array.
 
   Gives the size of the array
-  ====================*/
 
-  /*======== int len_arr() ==========
+```
+
+```c
+  int len_arr()
   Inputs:  char *** arr
   Returns: int of the length of the array.
 
   Gives the length of the array
-  ====================*/
+```
 
-  /*======== char ** parse_args() ==========
+  ```c
+  char ** parse_args() ==========
   Inputs:  char * line
   Returns: array with arguments
 
   Parses through the arguments
   Each index is a different argument.
-  ====================*/
+```
 
   /*======== char *** parse_lines() ==========
   Inputs:  char * line
