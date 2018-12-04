@@ -1,7 +1,7 @@
 # Shell[ing] out commands
-##Shafali Gupta
+## Shafali Gupta
 
-##Features:
+## Features:
   - Forks and executes commands
   - Parses through multiple commands
   - Redirection (<, >, >>)
@@ -9,13 +9,13 @@
   - Change directories
   - Display current working directory
 
-##Not implemented, but attempted
+## Not implemented, but attempted
   - piping
 
-##Bugs
+## Bugs
   - sometimes exiting takes a couple of tries to work.
 
-##Files & Function Headers:
+## Files & Function Headers:
 commands.c
   Handles parsing through lines and executing them.
 
@@ -45,36 +45,40 @@ commands.c
   Each index is a different argument.
 ```
 
-  /*======== char *** parse_lines() ==========
+```c
+  char *** parse_lines() 
   Inputs:  char * line
   Returns: array with commands
 
   Parses through multiple commands that are separated by a ;
   Each index is a different command.
-  ====================*/
+```
 
-  /*======== int execute_command() ==========
+ ```c
+  int execute_command()
   Inputs:  char ** command
   Returns: 0
 
   Executes individual commands  
   It takes into account for <, >, >>, and cd
-  ====================*/
+ ```
 
-  /*======== int execute_multiple_commands() ==========
+  ```c 
+  int execute_multiple_commands() 
   Inputs:  char * command
   Returns: 0
 
   Takes in a string of commands
   Parses through the string, executing each command.
-  ====================*/
+ ```
 
  shell.c
-  Executes the shell
- /*======== int main() ==========
+ Executes the shell
+ ```c
+ int main()
  Inputs: nothing
  Returns: 0
 
  Prompts for inputs
  Exits shell
- ====================*/
+ ```
