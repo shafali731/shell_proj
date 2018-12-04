@@ -50,7 +50,6 @@ Each index is a different argument.
 char ** parse_args( char * line ) {
     char ** args_arr = calloc(sizeof(char*), 25);
     for(int i = 0; (args_arr[i] = strsep(&line, " ")); i++){
-       // If the arg is an empty string (extra spaces), remove it
        if(*args_arr[i] == 0){
            i--;
        }
@@ -66,15 +65,15 @@ Parses through multiple commands that are separated by a ;
 Each index is a different command.
 ====================*/
 char *** parse_lines (char* line){
-	char *** ret = calloc(256, sizeof(char**));
+	char *** ret_arr = calloc(256, sizeof(char**));
 	char *s = strsep(&line, ";");
 	int i = 0;
 	while (s) {
-	  ret[i]=parse_args(s);
+	  ret_arr[i]=parse_args(s);
 		s = strsep(&line, ";");
 		i++;
 	}
-	return ret;
+	return ret_arr;
 }
 
 /*======== int execute_command() ==========
