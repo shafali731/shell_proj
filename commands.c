@@ -57,14 +57,14 @@ char ** parse_args( char * line ) {
    return args_arr;
 }
 
-/*======== char *** parse_lines() ==========
+/*======== char *** parse_comm() ==========
 Inputs:  char * line
 Returns: array with commands
 
 Parses through multiple commands that are separated by a ;
 Each index is a different command.
 ====================*/
-char *** parse_lines (char* line){
+char *** parse_comm (char* line){
 	char *** ret_arr = calloc(256, sizeof(char**));
 	char *s = strsep(&line, ";");
 	int i = 0;
@@ -157,7 +157,7 @@ Takes in a string of commands
 Parses through the string, executing each command.
 ====================*/
 int execute_multiple_commands(char * command){
-     char *** lines = parse_lines(command);
+     char *** lines = parse_comm(command);
      for(int i=0;i<len_arr(lines);i++){
         execute_command(lines[i]);
      }

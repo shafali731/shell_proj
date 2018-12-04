@@ -46,7 +46,7 @@
 ```
 
 ```c
-  char *** parse_lines() 
+  char *** parse_comm() 
   Inputs:  char * line
   Returns: array with commands
 
@@ -63,8 +63,8 @@
   It takes into account for <, >, >>, and cd
  ```
 
-  ```c 
-  int execute_multiple_commands() 
+  ```c
+  int execute_multiple_commands()
   Inputs:  char * command
   Returns: 0
 
