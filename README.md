@@ -16,8 +16,8 @@
   - sometimes exiting takes a couple of tries to work.
 
 ## Files & Function Headers:
-commands.c
-  Handles parsing through lines and executing them.
+### commands.c
+  #### Handles parsing through lines and executing them.
 
 ```c
   int size_arr()
@@ -72,8 +72,8 @@ commands.c
   Parses through the string, executing each command.
  ```
 
- shell.c
- Executes the shell
+ ### shell.c
+ #### Executes the shell
  ```c
  int main()
  Inputs: nothing
